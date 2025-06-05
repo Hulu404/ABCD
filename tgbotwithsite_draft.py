@@ -1,6 +1,6 @@
 import telebot as tg
 import webbrowser
-token = "7934846315:AAGj3Awh0S_Y8N0tWwnPWaOC4LWjYN2HFIM"
+token = ""
 
 bot = tg.TeleBot(token)
 
