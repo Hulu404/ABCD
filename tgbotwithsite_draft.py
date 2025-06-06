@@ -1,7 +1,7 @@
 import telebot as tg
 import webbrowser
 from telebot import types
-token = "7934846315:AAGj3Awh0S_Y8N0tWwnPWaOC4LWjYN2HFIM"
+token = ""
 
 bot = tg.TeleBot(token)
 
