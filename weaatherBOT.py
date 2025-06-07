@@ -3,7 +3,7 @@ import telebot as tg
 from bs4 import BeautifulSoup
 import types
 
-token = "7934846315:AAGj3Awh0S_Y8N0tWwnPWaOC4LWjYN2HFIM"
+token = ""
 bot = tg.TeleBot(token)
 url = "https://yandex.ru/pogoda/ru/213?lat=55.723705&lon=37.562866&utm_campaign=informer&utm_content=main_informer&utm_medium=web&utm_source=home"
 
