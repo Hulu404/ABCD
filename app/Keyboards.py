@@ -3,18 +3,23 @@ from aiogram.types import (ReplyKeyboardMarkup, KeyboardButton,
 from aiogram.utils.keyboard import ReplyKeyboardBuilder, InlineKeyboardBuilder
 #Кнопки на месте клавиатуры
 
+site = "https://hd.kinopoisk.ru/film/41a971dd517a30f9b86d20def219c326?content_tab=series&episode=9&playingContentId=47d719b99436e165b67898e6b71af7a2&season=2&watch="
 
-main = ReplyKeyboardMarkup(keyboard=[[
-    KeyboardButton(text="Button1")],
-    [KeyboardButton(text="Button2"), KeyboardButton(text="Button2.2")
-]],
-                        resize_keyboard=True,
-                        input_field_placeholder="Выберите пункт меню!"
-)
+main = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text="Каталог", callback_data="catalog")],
+    [InlineKeyboardButton(text="Корзина", callback_data="basket"),
+    InlineKeyboardButton(text="Контакты", callback_data="contacts")]
+])
+
+blue = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text="Good music", url=site)],
+    [InlineKeyboardButton(text="Motivation", url="https://vkvideo.ru/video605599968_456239490?t=1m31s")],
+    [InlineKeyboardButton(text="Назад", callback_data="return")]
+]) 
 
 
 settings = InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text="Baza", url="https://vkvideo.ru/video605599968_456239490?t=1m14s")]])
+    [InlineKeyboardButton(text="Baza", url=site)]])
 
 async def Reply_cars():
     Keyboard = ReplyKeyboardBuilder()
