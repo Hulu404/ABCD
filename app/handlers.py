@@ -4,7 +4,11 @@ from aiogram.types import Message, CallbackQuery
 import app.Keyboards as kb
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
+from app.middlewares import TestMiddleware
+
 router = Router()
+
+router.message.outer_middleware(TestMiddleware())
 
 class Reg(StatesGroup):
     name = State()
